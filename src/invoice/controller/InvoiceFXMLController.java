@@ -50,6 +50,10 @@ public class InvoiceFXMLController implements Initializable {
         menu.setText(mn.getName());
     }
 
+    public void getHarga(){
+        
+    }
+    /*
     public void setHarga(int Harga) {
         harga_txt.setText(String.valueOf(Harga));
         dt.getHarga_txt(Integer.parseInt(harga_txt.getText()));
@@ -60,7 +64,7 @@ public class InvoiceFXMLController implements Initializable {
 
         txttotal.setText(String.valueOf(ab));
 
-    }
+    }*/
 
     @FXML
     private void btnkeluar(ActionEvent event) {
