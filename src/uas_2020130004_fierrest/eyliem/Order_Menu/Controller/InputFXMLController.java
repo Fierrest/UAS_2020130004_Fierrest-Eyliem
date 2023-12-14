@@ -14,7 +14,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleButton;
@@ -22,6 +24,9 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import uas_2020130004_fierrest.eyliem.Controller.Ubah_Harga.FXMLUbahHargaController;
+import uas_2020130004_fierrest.eyliem.Models.ListHarga.HargaMenu;
+import uas_2020130004_fierrest.eyliem.Models.Menu.Menu;
 
 /**
  * FXML Controller class
@@ -30,6 +35,8 @@ import javafx.stage.Stage;
  */
 public class InputFXMLController implements Initializable {
 
+    public static HargaMenu hrgmns = new HargaMenu();
+    Menu mns = new Menu();
     @FXML
     private CheckBox ckff;
     @FXML
@@ -46,7 +53,6 @@ public class InputFXMLController implements Initializable {
     private CheckBox ckkulitayam;
     @FXML
     private AnchorPane Menu_List;
-    
     @FXML
     private CheckBox ckhot;
     @FXML
@@ -74,6 +80,14 @@ public class InputFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
+        hrgmns.setHotTea(15000.0);
+        hrgmns.setIceTea(18181.0);
+        hrgmns.setEggMushroom(18181.0);
+        hrgmns.setTahuCabeGaram(18181.0);
+        hrgmns.setKulitCabeGaram(200000.0);
+        hrgmns.setEskopsu(18181.0);
+        hrgmns.setFrenchFries(15000.0);
     }
 
     @FXML
@@ -90,15 +104,16 @@ public class InputFXMLController implements Initializable {
                 stg.setIconified(false);
                 stg.setScene(scene);
                 stg.show();
-                
+
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckhot.getText());     
-                invoice.setHarga(15000);
+                mns.setName(ckhot.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if (ckegg.isSelected()) {
+        } else if (ckegg.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -112,12 +127,13 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckegg.getText());     
-                invoice.setHarga(18181);
+                mns.setName(ckegg.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else  if (ckeskopsu.isSelected()) {
+        } else if (ckeskopsu.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -131,12 +147,13 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckeskopsu.getText());     
-                invoice.setHarga(18181);
+                mns.setName(ckeskopsu.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if (ckff.isSelected()) {
+        } else if (ckff.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -150,12 +167,13 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckff.getText());     
-                invoice.setHarga(15000);
+                mns.setName(ckff.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if (ckkulitayam.isSelected()) {
+        } else if (ckkulitayam.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -169,8 +187,9 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckkulitayam.getText());     
-                invoice.setHarga(18181);
+                mns.setName(ckkulitayam.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -188,12 +207,13 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckskin.getText());     
-                invoice.setHarga(18181);
+                mns.setName(ckskin.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else  if (cktahu.isSelected()) {
+        } else if (cktahu.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -207,12 +227,13 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(cktahu.getText());     
-                invoice.setHarga(18181);
+                mns.setName(cktahu.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if (ckicetea.isSelected()) {
+        } else if (ckicetea.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -226,17 +247,156 @@ public class InputFXMLController implements Initializable {
                 stg.show();
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
-                invoice.AmbilMenu(ckicetea.getText());     
-                invoice.setHarga(18181);
+                mns.setName(ckicetea.getText());
+                invoice.getValue(mns);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        
+
     }
 
     @FXML
     private void EditHarga(ActionEvent event) {
+        Alert at = new Alert(Alert.AlertType.WARNING, "Hanya Kurus Harga saja", ButtonType.OK);
+        at.showAndWait();
+        //Hot Tea
+        if (event.getSource() == HotteaEditHarga) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("Hot Tea");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                HotteaEditHarga.setSelected(true);
+                HotteaEditHarga.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == IceTeaEditHarga) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("Ice Tea");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                IceTeaEditHarga.setSelected(true);
+                IceTeaEditHarga.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == EggmushroomHargaEdit) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("Egg Mushroom");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                EggmushroomHargaEdit.setSelected(true);
+                EggmushroomHargaEdit.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == Chikenskinmushroom) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("Chicken Skin Mushroom");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                Chikenskinmushroom.setSelected(true);
+                Chikenskinmushroom.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == tahucabegaramhargaedit) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("Tahu Cabe Garam");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                tahucabegaramhargaedit.setSelected(true);
+                tahucabegaramhargaedit.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == eskopihargaedit) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("Es Kopsu");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                eskopihargaedit.setSelected(true);
+                eskopihargaedit.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (event.getSource() == kentanggorenghargaedit) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/FXML/Ubah_Harga/FXMLUbahHarga.fxml"));
+                Parent root = (Parent) loader.load();
+                Scene scene = new Scene(root);
+                Stage stg = new Stage();
+                FXMLUbahHargaController price_updater = loader.getController();
+                mns.setName("French Fries");
+                price_updater.getValue(mns);
+                stg.setTitle("Ubah Harga");
+                stg.setResizable(false);
+                stg.setIconified(false);
+                stg.setScene(scene);
+                stg.show();
+                kentanggorenghargaedit.setSelected(true);
+                kentanggorenghargaedit.setVisible(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="UAS_2020130004_Fierrest Eyliem.jnlp">
+  <information>
+    <title>UAS_2020130004_Fierrest Eyliem</title>
+    <vendor>Errest</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="uas_2020130004_fierrest.eyliem.MainClass.UTS_2020130004_FierrestEyliem"  name="UAS_2020130004_Fierrest Eyliem" />
+  <update check="always"/>
+</jnlp>
