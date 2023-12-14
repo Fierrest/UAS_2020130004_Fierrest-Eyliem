@@ -12,8 +12,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import invoice.fxml.modelinvoice;
-import uts_2020130004_fierrest.eyliem.Models.Menu.Menu;
+import java.text.NumberFormat;
+import java.util.Locale;
+import javafx.scene.image.Image;
+import uas_2020130004_fierrest.eyliem.Models.Menu.Menu;
+import uas_2020130004_fierrest.eyliem.Order_Menu.Controller.InputFXMLController;
 
 /**
  * FXML Controller class
@@ -22,9 +25,9 @@ import uts_2020130004_fierrest.eyliem.Models.Menu.Menu;
  */
 public class InvoiceFXMLController implements Initializable {
 
-    modelinvoice dt = new modelinvoice();
-    
-    
+    //Curency Formatter
+    Locale Indonesia = new Locale("in", "ID");
+    NumberFormat formater = NumberFormat.getCurrencyInstance(Indonesia);
 
     @FXML
     private AnchorPane invoice_total;
@@ -46,26 +49,70 @@ public class InvoiceFXMLController implements Initializable {
 
     }
 
-    public void AmbilMenu(Menu mn) {
-        menu.setText(mn.getName());
-    }
+    public void getValue(Menu mns) {
+        String nama;
+        double Harga;
+        switch (mns.getName()) {
+            case "Hot Tea": {
+                nama = mns.getName();
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getHotTea();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+            case "Ice Tea": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getIceTea();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+            case "Egg Mushroom": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getEggMushroom();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+            case "Chiken Skin Mushroom": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getChikenSkinMushroom();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+            case "Tahu Cabe Garam": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getTahuCabeGaram();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+            case "Kulit Cabe Garam": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getKulitCabeGaram();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+            case "Eskopsu": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getEskopsu();
+                harga_txt.setText(String.valueOf(Harga));
 
-    public void getHarga(){
-        
-    }
-    /*
-    public void setHarga(int Harga) {
-        harga_txt.setText(String.valueOf(Harga));
-        dt.getHarga_txt(Integer.parseInt(harga_txt.getText()));
+                break;
+            }
+            case "French Fries": {
+                menu.setText(mns.getName());
+                Harga = InputFXMLController.hrgmns.getFrenchFries();
+                harga_txt.setText(String.valueOf(Harga));
+                break;
+            }
+        }
         double na = (Double.valueOf(harga_txt.getText()) * 0.01);
-
-        txtpajak.setText(String.valueOf(na));
+        txtpajak.setText(formater.format(na));
         double ab = (Double.valueOf(harga_txt.getText()) * 0.01) + (Double.valueOf(harga_txt.getText()));
+        txttotal.setText(formater.format(ab));
 
-        txttotal.setText(String.valueOf(ab));
+    }
 
-    }*/
 
+  
     @FXML
     private void btnkeluar(ActionEvent event) {
         System.exit(0);

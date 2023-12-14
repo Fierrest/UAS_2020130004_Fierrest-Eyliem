@@ -26,7 +26,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import uas_2020130004_fierrest.eyliem.Controller.Ubah_Harga.FXMLUbahHargaController;
 import uas_2020130004_fierrest.eyliem.Models.ListHarga.HargaMenu;
-import uts_2020130004_fierrest.eyliem.Models.Menu.Menu;
+import uas_2020130004_fierrest.eyliem.Models.Menu.Menu;
 
 /**
  * FXML Controller class
@@ -108,7 +108,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckhot.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -128,7 +128,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckegg.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -148,7 +148,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckeskopsu.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -168,7 +168,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckff.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -188,7 +188,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckkulitayam.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -208,7 +208,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckskin.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -228,7 +228,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(cktahu.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -248,7 +248,7 @@ public class InputFXMLController implements Initializable {
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 mns.setName(ckicetea.getText());
-                invoice.AmbilMenu(mns);
+                invoice.getValue(mns);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -390,8 +390,8 @@ public class InputFXMLController implements Initializable {
                 stg.setIconified(false);
                 stg.setScene(scene);
                 stg.show();
-                HotteaEditHarga.setSelected(true);
-                HotteaEditHarga.setVisible(false);
+                kentanggorenghargaedit.setSelected(true);
+                kentanggorenghargaedit.setVisible(false);
             } catch (IOException e) {
                 e.printStackTrace();
             }
