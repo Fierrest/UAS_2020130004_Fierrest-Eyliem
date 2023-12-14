@@ -13,17 +13,19 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import invoice.fxml.modelinvoice;
+
 /**
  * FXML Controller class
  *
  * @author Errest
  */
 public class InvoiceFXMLController implements Initializable {
+
     modelinvoice dt = new modelinvoice();
 
     @FXML
     private AnchorPane invoice_total;
-  
+
     @FXML
     private TextArea menu;
     @FXML
@@ -38,18 +40,20 @@ public class InvoiceFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
-    }    
-    public void AmbilMenu(String Menu ){
+
+    }
+
+    public void AmbilMenu(String Menu) {
         menu.setText(Menu);
     }
-    public void setHarga(int Harga){
+
+    public void setHarga(int Harga) {
         harga_txt.setText(String.valueOf(Harga));
         dt.getHarga_txt(Integer.parseInt(harga_txt.getText()));
-double na = (Double.valueOf(harga_txt.getText())* 0.01);        
+        double na = (Double.valueOf(harga_txt.getText()) * 0.01);
 
         txtpajak.setText(String.valueOf(na));
-        double ab = (Double.valueOf(harga_txt.getText())* 0.01)+(Double.valueOf(harga_txt.getText()));        
+        double ab = (Double.valueOf(harga_txt.getText()) * 0.01) + (Double.valueOf(harga_txt.getText()));
 
         txttotal.setText(String.valueOf(ab));
 
