@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="invoice_total" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="invoice.controller.InvoiceFXMLController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4e2ff" height="746.0" layoutX="-6.0" stroke="TRANSPARENT" strokeType="INSIDE" width="763.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4ffe1" height="86.0" layoutX="-8.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1259.0" />
+      <Text layoutX="501.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receipt">
+         <font>
+            <Font name="Leelawadee Bold" size="59.0" />
+         </font>
+      </Text>
+      <Label layoutX="80.0" layoutY="165.0" text="Menu">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="337.0" text="Harga">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="menu" layoutX="197.0" layoutY="116.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="harga_txt" layoutX="197.0" layoutY="337.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="767.0" layoutY="146.0" text="Pajak">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtpajak" layoutX="885.0" layoutY="150.0" prefHeight="36.0" prefWidth="233.0" />
+      <Label layoutX="767.0" layoutY="232.0" text="Total Harga">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttotal" layoutX="951.0" layoutY="237.0" prefHeight="36.0" prefWidth="233.0" />
+      <Button layoutX="1066.0" layoutY="614.0" mnemonicParsing="false" onAction="#btnkeluar" prefHeight="78.0" prefWidth="154.0" text="Keluar" textFill="#3352d0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

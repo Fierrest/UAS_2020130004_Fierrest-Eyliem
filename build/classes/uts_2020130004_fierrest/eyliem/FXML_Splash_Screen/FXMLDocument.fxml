@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="Smash_Shake" prefHeight="543.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts_2020130004_fierrest.eyliem.FXML_Splash_Screen.Controller.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4e2ff" height="543.0" stroke="TRANSPARENT" strokeType="INSIDE" width="852.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4ffe1" height="88.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="852.0" />
+      <Label layoutX="206.0" layoutY="-13.0" text="Smash&amp;Shake!" textFill="#2ca8b5">
+         <font>
+            <Font name="Leelawadee UI" size="73.0" />
+         </font>
+      </Label>
+      <Button layoutX="327.0" layoutY="229.0" mnemonicParsing="false" onAction="#Order_btn" text="Order" textFill="#27769e">
+         <font>
+            <Font name="Leelawadee" size="57.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
