@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="Smash_Shake" prefHeight="543.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts_2020130004_fierrest.eyliem.FXML_Splash_Screen.Controller.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="Smash_Shake" prefHeight="543.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas_2020130004_fierrest.eyliem.FXML_Splash_Screen.Controller.FXMLDocumentController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4e2ff" height="543.0" stroke="TRANSPARENT" strokeType="INSIDE" width="852.0" />

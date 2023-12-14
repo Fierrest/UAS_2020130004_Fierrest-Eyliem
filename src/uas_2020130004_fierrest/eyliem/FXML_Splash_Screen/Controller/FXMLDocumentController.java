@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package uts_2020130004_fierrest.eyliem.FXML_Splash_Screen.Controller;
+package uas_2020130004_fierrest.eyliem.FXML_Splash_Screen.Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -44,7 +44,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void Order_btn(ActionEvent event) {
          try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/uts_2020130004_fierrest/eyliem/Order_Menu/inputFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/uas_2020130004_fierrest/eyliem/Order_Menu/FXML/inputFXML.fxml"));
             Parent root = (Parent) loader.load();
             Scene scene = new Scene(root);
             Stage stg = new Stage();

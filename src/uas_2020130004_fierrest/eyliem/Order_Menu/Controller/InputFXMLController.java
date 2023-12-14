@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package uts_2020130004_fierrest.eyliem.Order_Menu.Controller;
+package uas_2020130004_fierrest.eyliem.Order_Menu.Controller;
 
 import invoice.controller.InvoiceFXMLController;
 import java.io.IOException;
@@ -44,7 +44,7 @@ public class InputFXMLController implements Initializable {
     private CheckBox ckkulitayam;
     @FXML
     private AnchorPane Menu_List;
-    private RadioButton rbhottea;
+    
     @FXML
     private CheckBox ckhot;
 
@@ -70,6 +70,7 @@ public class InputFXMLController implements Initializable {
                 stg.setIconified(false);
                 stg.setScene(scene);
                 stg.show();
+                
                 Menu_List.getScene().getWindow().hide();
                 InvoiceFXMLController invoice = loader.getController();
                 invoice.AmbilMenu(ckhot.getText());     
@@ -77,8 +78,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-         if (ckegg.isSelected()) {
+        }else if (ckegg.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -97,8 +97,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-         if (ckeskopsu.isSelected()) {
+        }else  if (ckeskopsu.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -117,8 +116,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-         if (ckff.isSelected()) {
+        }else if (ckff.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -137,8 +135,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-         if (ckkulitayam.isSelected()) {
+        }else if (ckkulitayam.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -157,9 +154,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-        
-        if (ckskin.isSelected()) {
+        } else if (ckskin.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -178,8 +173,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-         if (cktahu.isSelected()) {
+        }else  if (cktahu.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
@@ -198,8 +192,7 @@ public class InputFXMLController implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-         if (ckicetea.isSelected()) {
+        }else if (ckicetea.isSelected()) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/invoice/fxml/invoiceFXML.fxml"));
                 Parent root = (Parent) loader.load();
