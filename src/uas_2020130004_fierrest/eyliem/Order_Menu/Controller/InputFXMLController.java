@@ -17,6 +17,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -47,6 +49,24 @@ public class InputFXMLController implements Initializable {
     
     @FXML
     private CheckBox ckhot;
+    @FXML
+    private ToggleButton HotteaEditHarga;
+    @FXML
+    private ToggleGroup EditHarga;
+    @FXML
+    private ToggleButton IceTeaEditHarga;
+    @FXML
+    private ToggleButton EggmushroomHargaEdit;
+    @FXML
+    private ToggleButton Chikenskinmushroom;
+    @FXML
+    private ToggleButton tahucabegaramhargaedit;
+    @FXML
+    private ToggleButton kulitcabegaramhargaedit;
+    @FXML
+    private ToggleButton kentanggorenghargaedit;
+    @FXML
+    private ToggleButton eskopihargaedit;
 
     /**
      * Initializes the controller class.
@@ -213,6 +233,10 @@ public class InputFXMLController implements Initializable {
             }
         }
         
+    }
+
+    @FXML
+    private void EditHarga(ActionEvent event) {
     }
 
 }

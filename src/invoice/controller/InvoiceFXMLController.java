@@ -13,6 +13,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import invoice.fxml.modelinvoice;
+import uts_2020130004_fierrest.eyliem.Models.Menu.Menu;
 
 /**
  * FXML Controller class
@@ -22,6 +23,8 @@ import invoice.fxml.modelinvoice;
 public class InvoiceFXMLController implements Initializable {
 
     modelinvoice dt = new modelinvoice();
+    
+    
 
     @FXML
     private AnchorPane invoice_total;
@@ -43,8 +46,8 @@ public class InvoiceFXMLController implements Initializable {
 
     }
 
-    public void AmbilMenu(String Menu) {
-        menu.setText(Menu);
+    public void AmbilMenu(Menu mn) {
+        menu.setText(mn.getName());
     }
 
     public void setHarga(int Harga) {
