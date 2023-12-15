@@ -56,7 +56,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: check --info --stacktrace
-        java-version: '11'
+        java-version: '8'
         distribution: 'temurin'
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
